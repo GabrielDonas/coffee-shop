@@ -12,8 +12,8 @@ const Shelf = () => {
                             className="thumbnail">
                         </div>
                     </div>
-                    <h3 className="title">Red Brick</h3>
-                    <p>Seasonal blend is a mix of Los Ancestros from Guatemala and Puente Tarrazu from Costa Rica.</p>
+                    <h3 className="title">Red Brick <span role="img" aria-label="brazilian flag">🇧🇷</span></h3>
+                    <div className="description">Seasonal blend is a mix of Los Ancestros from Guatemala and Puente Tarrazu from Costa Rica.</div>
                     <div className="price">£10.00</div>
                     <button>Add to Cart</button>
                 </div> 
@@ -23,8 +23,8 @@ const Shelf = () => {
                             className="thumbnail">
                         </div>
                     </div>
-                    <h3 className="title">Red Brick</h3>
-                    <p>Seasonal blend is a mix of Los Ancestros from Guatemala and Puente Tarrazu from Costa Rica.</p>
+                    <h3 className="title">Red Brick <span role="img" aria-label="guatemala flag">🇬🇹</span></h3>
+                    <div className="description">Seasonal blend is a mix of Los Ancestros from Guatemala and Puente Tarrazu from Costa Rica.</div>
                     <div className="price">£10.00</div>
                     <button>Add to Cart</button>
                 </div> 

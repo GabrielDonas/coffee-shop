@@ -20,19 +20,17 @@
         &:hover {
           border: 1px solid #eee;
 
-          .shelf-item__buy-btn {
-            background-color: #eabf00;
-          }
         }
         
         .image-container{
             width: 200px;
             height: 200px;
             margin: 0 auto;
+
             .thumbnail{
                 border-radius: 50%;
                 background-position: center;
-                background-size: 100%;
+                background-size: 110%;
                 background-repeat: no-repeat;
                 height: 100%;
             }
@@ -42,9 +40,23 @@
             font-size: 1.5rem;
             font-weight: 500;
         }
+        
+        .description{
+            color:rgb(118, 118, 118);
+        }
 
         .price{
+            margin-top: 1rem;
             font-size: 1.3rem;
+        }
+
+        button{
+            margin-top: 1rem;
+            font-weight: 800;
+            background-color: #1A1C20;
+            color: white;
+            border: 1px solid rgba(128, 128, 128, 0.413);
+            padding: 12px 30px;
         }
     
     }
