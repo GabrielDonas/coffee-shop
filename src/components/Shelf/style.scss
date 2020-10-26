@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid green;
     width: 85%;
     min-height: 600px;
     margin: 0 auto;
@@ -15,7 +14,7 @@
         padding: 10px;
         margin-bottom: 30px;
         border: 1px solid transparent;
-        cursor: pointer;
+        cursor: default;
 
         &:hover {
           border: 1px solid #eee;
@@ -42,6 +41,7 @@
         }
         
         .description{
+            height: 3rem;
             color:rgb(118, 118, 118);
         }
 
@@ -57,6 +57,13 @@
             color: white;
             border: 1px solid rgba(128, 128, 128, 0.413);
             padding: 12px 30px;
+            transition: background-color .3s;
+
+            &:hover{
+                background-color: #d6d2c4;
+                border: none;
+                cursor: pointer;
+            }
         }
     
     }
