@@ -32,6 +32,12 @@
                 background-size: 110%;
                 background-repeat: no-repeat;
                 height: 100%;
+
+                transition: background-size ease .5s;
+            
+                &:hover{
+                    background-size: 130%;
+                }
             }
         }
 
@@ -41,7 +47,7 @@
         }
         
         .description{
-            height: 3rem;
+            height: 4rem;
             color:rgb(118, 118, 118);
         }
 
