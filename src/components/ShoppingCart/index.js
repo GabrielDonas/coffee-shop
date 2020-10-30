@@ -8,16 +8,23 @@ import './style.scss'
 
 
 const ShoppingCart = () => {
-  const [productlist, cartProducts, setCartProducts] = useContext(ShoppingContext) // fix this
+  const [, cartProducts] = useContext(ShoppingContext)
+
 
   return (
       <div>
-        <button onClick={() => console.log(cartProducts)}>LOOOOOG</button> {/*remove once it's fixed*/}
         <button className="bm-burger-button">
           <ShoppingCartIcon className="cart"/>
         </button> 
         <Menu isOpen={false} right>
-          <ShoppingCartItems />
+
+          {cartProducts.map((product, index) => {
+             return <ShoppingCartItems key={index} 
+              title={product.title} 
+              price={product.price} 
+              quantity={product.quantity}/>
+        })}
+
           <Checkout />
         </Menu>
       </div>

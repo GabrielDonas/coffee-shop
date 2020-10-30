@@ -8,7 +8,7 @@ export const ShoppingProvider = props => {
     const [cartProducts, setCartProducts] = useState([])
 
     return (
-        <ShoppingContext.Provider value={ [productList, cartProducts, setCartProducts] }>
+        <ShoppingContext.Provider value={ [ productList, cartProducts, setCartProducts ] }>
             {props.children}
         </ShoppingContext.Provider>
     )

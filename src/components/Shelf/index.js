@@ -7,8 +7,13 @@ const Shelf = () => {
     const [productlist, cartProducts, setCartProducts] = useContext(ShoppingContext)
 
     const addToCart = product => {
-        setCartProducts([...cartProducts, product])
-        console.log(cartProducts)
+        if(!cartProducts.some(obj => obj.id === product.id)){
+            product.quantity = 1;
+            setCartProducts([...cartProducts, product])
+        } else {
+            product.quantity++;
+            setCartProducts([...cartProducts])
+        }
     }
 
 
@@ -24,7 +29,7 @@ const Shelf = () => {
                         </div>
                         <h3 className="title">{product.title} <span role="img" aria-label={`flag of ${product.country}`}>{product.flag}</span></h3>
                         <div className="description">{product.description}</div>
-                        <div className="price">{product.price}£</div>
+                        <div className="price">£{product.price}</div>
                         <button onClick={() => {addToCart(product)}}>Add to Cart</button>
                 </div> 
                 )}

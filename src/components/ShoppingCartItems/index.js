@@ -2,7 +2,9 @@ import React from 'react'
 import './style.scss'
 import CoffeeBag from '../../assets/CoffeeBag.jpg'
 
-const ShoppingCartItems = () => {
+const ShoppingCartItems = ({ title, price, quantity}) => {
+
+
     return (
         <div className="items-container">
             <div className="item-info">
@@ -11,15 +13,15 @@ const ShoppingCartItems = () => {
                     </div>
                 </div>
                 <div className="item-description">
-                    <div className="title-cart">RED BRICK</div>
-                    <div className="item-price">£13</div>
+                    <div className="title-cart">{title}</div>
+                    <div className="item-price">£{price}</div>
                 </div>
             </div>
             
             <div className="buttons-container">
                 <button className="remove-item">-</button>
-                <button className="quantity-cart">1</button>
-                <button className="add-item">+</button>
+                <button className="quantity-cart">{quantity}</button>
+                <button className="add-item" onClick={() => quantity++}>+</button>
             </div>
         </div>
     )
