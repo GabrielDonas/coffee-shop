@@ -15,6 +15,9 @@ const ShoppingCart = () => {
       <div>
         <button className="bm-burger-button">
           <ShoppingCartIcon className="cart"/>
+          <div className={cartProducts.length > 0 ? "badge-counter-wrapper" : "quantity-none"}>
+            <div className="badge-count">{cartProducts.length}</div>
+          </div>
         </button> 
         <Menu isOpen={false} right>
 
