@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './style.scss'
 import CoffeeBag from '../../assets/CoffeeBag.jpg'
+import { ShoppingContext } from '../ShoppingContext/ShoopingContext'
 
 const ShoppingCartItems = ({ title, price, quantity}) => {
 
+    const [, cartProducts, setCartProducts] = useContext(ShoppingContext)
+
+    const addItem = product => {
+        const item = cartProducts.find(item => item.title === product)
+        item.quantity++
+        setCartProducts([...cartProducts])
+    }
+
+    const removeItem = product => {
+        const item = cartProducts.find(item => item.title === product)
+        const itemIndex = cartProducts.indexOf(item)
+        
+        if(item.quantity > 1){
+            item.quantity--
+        } else {
+            cartProducts.splice(itemIndex, 1)
+        }
+        setCartProducts([...cartProducts])
+    }
 
     return (
         <div className="items-container">
@@ -19,9 +39,9 @@ const ShoppingCartItems = ({ title, price, quantity}) => {
             </div>
             
             <div className="buttons-container">
-                <button className="remove-item">-</button>
+                <button className="remove-item" onClick={() => removeItem(title)}>-</button>
                 <button className="quantity-cart">{quantity}</button>
-                <button className="add-item" onClick={() => quantity++}>+</button>
+                <button className="add-item" onClick={() => addItem(title)}>+</button>
             </div>
         </div>
     )
