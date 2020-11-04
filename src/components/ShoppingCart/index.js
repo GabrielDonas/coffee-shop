@@ -20,14 +20,14 @@ const ShoppingCart = () => {
           </div>
         </button> 
         <Menu isOpen={false} right>
-
-          {cartProducts.map((product, index) => {
-             return <ShoppingCartItems key={index} 
-              title={product.title} 
-              price={product.price} 
-              quantity={product.quantity}/>
-        })}
-
+        <div className="item-list">
+            {cartProducts.map((product, index) => {
+               return <ShoppingCartItems key={index} 
+                title={product.title} 
+                price={product.price} 
+                quantity={product.quantity}/>
+            })}
+        </div>
           <Checkout />
         </Menu>
       </div>

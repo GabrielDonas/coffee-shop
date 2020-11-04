@@ -79,8 +79,16 @@
   }
   
   /* Wrapper for item list */
+  .item-list{
+    max-height: calc(100% - 210px);
+    overflow: scroll;
+  }
+
   .bm-item-list {
     color: #b8b7ad;
+    & :focus{
+      outline: none;
+    }
   }
   
   /* Individual item */
