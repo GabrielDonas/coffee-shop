@@ -4,6 +4,7 @@ import { ShoppingProvider } from './components/ShoppingContext/ShoopingContext'
 import Header from './components/Header/index'
 import Shelf from './components/Shelf/index'
 import ShoppingCart from './components/ShoppingCart/index'
+import Footer from './components/Footer/index'
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Header />
         <ShoppingCart />
         <Shelf />
-      </ShoppingProvider>  
+      </ShoppingProvider>
+      <Footer />
     </>
   );
 }

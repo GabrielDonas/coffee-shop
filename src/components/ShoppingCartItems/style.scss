@@ -11,6 +11,15 @@
         border: 1px solid white;
         color: white;
     }
+
+    .remove-item, .add-item{
+        cursor: pointer;
+        
+        &:hover{
+            background-color: #252832;
+        }
+    }
+
     .item-info{
         display: flex;
         justify-content: space-between;
@@ -27,7 +36,7 @@
 
         .thumbnail-cart{
             background-position: center;
-            background-size: 100%;
+            background-size: 150%;
             background-repeat: no-repeat;
             height: 100%;
         }

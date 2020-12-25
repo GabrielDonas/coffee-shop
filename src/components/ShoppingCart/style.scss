@@ -12,13 +12,12 @@
   & :focus {
       outline: none;
   }
-    
+  
   .cart{
       font-size: 2.5rem;
       color: rgba(128, 128, 128, 0.413);
       pointer-events: none;
   }
-
 
   .badge-counter-wrapper{
     display: flex;
@@ -94,6 +93,7 @@
 
       .empty-cart{
         font-size: 2rem;
+        margin: .5rem;
       }
     }
   }

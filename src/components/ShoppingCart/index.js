@@ -27,7 +27,8 @@ const ShoppingCart = () => {
                  return <ShoppingCartItems key={index} 
                   title={product.title} 
                   price={product.price} 
-                  quantity={product.quantity}/>
+                  quantity={product.quantity}
+                  thumbnail={require(`../../assets/coffee${product.id}.jpg`)}/>
               })}
           </div>
           <Checkout />

@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
-import CoffeePlaceholder from '../../assets/coffee-placeholder_1.jpg'
 import { ShoppingContext } from '../ShoppingContext/ShoopingContext'
 import './style.scss'
 
+
 const Shelf = () => {
     const [productlist, cartProducts, setCartProducts] = useContext(ShoppingContext)
+    
 
     const addToCart = product => {
         if(!cartProducts.some(obj => obj.id === product.id)){
@@ -23,7 +24,7 @@ const Shelf = () => {
                 {productlist.products.map(product => 
                     <div className="shelf-item" key={product.id}>
                         <div className="image-container">
-                            <div style={{backgroundImage: `url(${CoffeePlaceholder})`}}
+                            <div style={{backgroundImage: `url(${require(`../../assets/coffee${product.id}.jpg`)})`}}
                                 className="thumbnail">
                             </div>
                         </div>

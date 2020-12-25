@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
 import './style.scss'
-import CoffeeBag from '../../assets/CoffeeBag.jpg'
 import { ShoppingContext } from '../ShoppingContext/ShoopingContext'
 
-const ShoppingCartItems = ({ title, price, quantity}) => {
+const ShoppingCartItems = ({ title, price, quantity, thumbnail}) => {
 
     const [, cartProducts, setCartProducts] = useContext(ShoppingContext)
 
@@ -29,7 +28,7 @@ const ShoppingCartItems = ({ title, price, quantity}) => {
         <div className="items-container">
             <div className="item-info">
                 <div className="thumbnail-container">
-                    <div className="thumbnail-cart" style={{backgroundImage: `url(${CoffeeBag})`}}>
+                    <div className="thumbnail-cart" style={{backgroundImage: `url(${thumbnail})`}}>
                     </div>
                 </div>
                 <div className="item-description">
