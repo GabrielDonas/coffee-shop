@@ -1,7 +1,7 @@
 # Coffee Shop | E-commerce React App 🛒
 An ecommerce single-page application built with React and React Context.
 
-👉 [Live  app here!](blissful-haibt-6e29fa.netlify.app/) 👈
+👉 [Live  app here!](blissful-haibt-6e29fa.netlify.app) 👈
 
 ## Run Locally
 #### Requirements
