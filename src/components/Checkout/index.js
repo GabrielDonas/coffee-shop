@@ -11,9 +11,13 @@ const Checkout = () => {
         if(cartProducts.length !== 0){
             const result = cartProducts.map(product => product.price * product.quantity).reduce((a, b) => a + b)
             total = result;
-            }
-            return total
         }
+        return total
+    }
+    
+    const proceedToCheckout = () => {
+        alert(`Your total is £${calculateTotal()}`)
+    }
         
 
     return (
@@ -22,7 +26,7 @@ const Checkout = () => {
                 <span>Total:</span>
                 <span>£{calculateTotal()}</span>
             </div>
-        <button>CHECKOUT</button>
+        <button onClick={() => proceedToCheckout()}>CHECKOUT</button>
         </div>
     )
 }
